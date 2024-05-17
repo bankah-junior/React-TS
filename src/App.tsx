@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Login, Register, Home, Profile } from './pages/index'
-import EditProfile from './pages/profile/EditProfile';
+import { Login, Register, Home, Profile, EditProfile, Post, EditPost } from './pages/index'
 
 type Props = {}
 
@@ -13,6 +12,8 @@ const App = (props: Props) => {
         <Route path='/home' element={<Home />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/profile/edit' element={<EditProfile />} />
+        <Route path='/post' element={<Post />} />
+        <Route path='/post/:id' element={<EditPost />} />
       </Routes>
     </Router>
   )
